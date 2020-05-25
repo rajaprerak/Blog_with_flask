@@ -1,0 +1,25 @@
+{
+    "params":
+    {
+        "your_name": "Prerak Raja",
+        "blog_name": "Tech Ingenious",
+        "tagline" : "Awesome articles at one place",
+        "local_server" : "True",
+        "local_uri" : "mysql://root:@localhost/techingenious",
+        "prod_uri" : "mysql://root:@localhost/techingenious",
+        "insta_url" : "https://www.instagram.com/rajaprerak/",
+        "linkedin_url" : "https://www.linkedin.com/in/rajaprerak/",
+        "github_url" : "https://github.com/rajaprerak",
+        "gmail-user":"your-email@gmail.com",
+        "gmail-password":"gmailpassword",
+        "about_info" : "I am keenly fascinated by machine learning, deep learning and computer vision. While perusing the underlying concepts and applying them adroitly to various projects, I explored this alluring domains in depth. Spurred by such a comprehensive exposure seamlessly blending theory and practice, my penchant for Artificial Intelligence came into being."
+    }
+
+
+
+
+
+
+
+
+}
