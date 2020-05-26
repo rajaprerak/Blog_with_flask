@@ -12,7 +12,12 @@
         "github_url" : "https://github.com/rajaprerak",
         "gmail-user":"your-email@gmail.com",
         "gmail-password":"gmailpassword",
-        "about_info" : "I am keenly fascinated by machine learning, deep learning and computer vision. While perusing the underlying concepts and applying them adroitly to various projects, I explored this alluring domains in depth. Spurred by such a comprehensive exposure seamlessly blending theory and practice, my penchant for Artificial Intelligence came into being."
+        "about_info" : "I am keenly fascinated by machine learning, deep learning and computer vision. While perusing the underlying concepts and applying them adroitly to various projects, I explored this alluring domains in depth. Spurred by such a comprehensive exposure seamlessly blending theory and practice, my penchant for Artificial Intelligence came into being.",
+        "no_of_posts": 5,
+        "login_image": "login.svg",
+        "admin_user":"prerak",
+        "admin_password": "raja"
+
     }
 
 
