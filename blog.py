@@ -4,10 +4,16 @@ from datetime import datetime
 import json
 # from flask_mail import Mail
 import math
+import logging
+import sys
+import os
+
 
 with open('config.json','r') as f:
     params = json.load(f)["params"]
 app = Flask(__name__)
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
 app.secret_key = 'super-secret-key'
 app.config.update(
     MAIL_SERVER = 'smtp.gmail.com',
@@ -19,9 +25,9 @@ app.config.update(
 # mail = Mail(app)
 
 if params["local_server"]:
-    app.config['SQLALCHEMY_DATABASE_URI'] = params["local_uri"]
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://fsjnrncptrpcrg:1a839420d0790ab470d35102f91f479fb683e87a89d5ed174fd9a80c1754dae2@ec2-18-232-143-90.compute-1.amazonaws.com:5432/d2tvpr8hbt85bc'
 else:
-     app.config['SQLALCHEMY_DATABASE_URI'] = params["prod_uri"]
+     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://fsjnrncptrpcrg:1a839420d0790ab470d35102f91f479fb683e87a89d5ed174fd9a80c1754dae2@ec2-18-232-143-90.compute-1.amazonaws.com:5432/d2tvpr8hbt85bc'
 
 db = SQLAlchemy(app)
 
