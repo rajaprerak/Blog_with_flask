@@ -6,8 +6,6 @@ import json
 import math
 import logging
 
-app.logger.addHandler(logging.StreamHandler(sys.stdout))
-app.logger.setLevel(logging.ERROR)
 
 with open('config.json','r') as f:
     params = json.load(f)["params"]
