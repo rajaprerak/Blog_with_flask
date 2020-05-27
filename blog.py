@@ -7,8 +7,6 @@ import math
 import logging
 import sys
 import os
-from flask.cli import with_appcontext
-import click
 
 with open('config.json','r') as f:
     params = json.load(f)["params"]
@@ -31,10 +29,7 @@ else:
      app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 
 db = SQLAlchemy(app)
-@click.command(name='create_tables')
-@with_appcontext
-def create_tables():
-    db.create_all()
+db.create_all(app=create_app())
 
 class Contacts(db.Model):
 
