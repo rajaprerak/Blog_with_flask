@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, session, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import json
-from flask_mail import Mail
+# from flask_mail import Mail
 import math
 
 
@@ -17,7 +17,7 @@ app.config.update(
     MAIL_USERNAME = params['gmail-user'],
     MAIL_PASSWORD=  params['gmail-password']
 )
-mail = Mail(app)
+# mail = Mail(app)
 
 if params["local_server"]:
     app.config['SQLALCHEMY_DATABASE_URI'] = params["local_uri"]
