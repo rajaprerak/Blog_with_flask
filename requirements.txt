@@ -14,3 +14,4 @@ SQLAlchemy==1.0.11
 Werkzeug==0.11.3
 WTForms==2.1
 mysqlclient
+psycopg2

@@ -6,6 +6,8 @@ import json
 import math
 import logging
 import sys
+import os
+
 
 with open('config.json','r') as f:
     params = json.load(f)["params"]
@@ -23,9 +25,9 @@ app.config.update(
 # mail = Mail(app)
 
 if params["local_server"]:
-    app.config['SQLALCHEMY_DATABASE_URI'] = params["local_uri"]
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 else:
-     app.config['SQLALCHEMY_DATABASE_URI'] = params["prod_uri"]
+     app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 
 db = SQLAlchemy(app)
 
