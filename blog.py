@@ -8,7 +8,7 @@ import logging
 import sys
 import os
 from flask.cli import with_appcontext
-
+import click
 
 with open('config.json','r') as f:
     params = json.load(f)["params"]
