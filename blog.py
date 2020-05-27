@@ -5,13 +5,12 @@ import json
 # from flask_mail import Mail
 import math
 import logging
-
+import sys
 
 with open('config.json','r') as f:
     params = json.load(f)["params"]
 app = Flask(__name__)
-app.logger.addHandler(logging.StreamHandler(sys.stdout))
-app.logger.setLevel(logging.ERROR)
+
 app.secret_key = 'super-secret-key'
 app.config.update(
     MAIL_SERVER = 'smtp.gmail.com',
@@ -167,3 +166,5 @@ def contact():
 
 if __name__ == "__main__":
     app.run(debug=True)
+    app.logger.addHandler(logging.StreamHandler(sys.stdout))
+    app.logger.setLevel(logging.ERROR)
