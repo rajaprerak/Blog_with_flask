@@ -20,13 +20,12 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
-        <a href="/dashboard"></a><button class="btn btn-primary">Dashboard</a></button>
-        <a href="/logout"></a><button class="btn btn-primary float-right">Logout</a></button>
+        <a href="/dashboard"><button class="btn btn-primary">Dashboard</button></a>
 
         <hr>
 
           <h1>Add/Edit Posts</h1>
-        <form name="sentMessage" id="contactForm" action = "/edit/{{post.sno}}" method="post" novalidate>
+        <form name="sentMessage" id="contactForm" action = "/edit/{{sno}}" method="post" novalidate>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls">
                 <label>Title</label>
