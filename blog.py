@@ -7,6 +7,7 @@ import math
 import logging
 import sys
 import os
+from flask.cli import with_appcontext
 
 
 with open('config.json','r') as f:
@@ -30,7 +31,10 @@ else:
      app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 
 db = SQLAlchemy(app)
-
+@click.command(name='create_tables')
+@with_appcontext
+def create_tables():
+    db.create_all()
 
 class Contacts(db.Model):
 
